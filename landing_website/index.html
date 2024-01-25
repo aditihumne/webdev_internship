@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing GuI-Design</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png"></a>
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Latest</a></li>
+        <li><a href="#">Movies List</a></li>
+    </ul>
+    <div class="search">
+        <input type="text" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        
+    </div>
+
+    </header>
+    <div class="banner">
+        <img src="hp.png" class="bg">
+        <div class="content">
+            <img src="HP5-Concert-Page-Image-2.png" class="movieTitle">
+            <h4><span>2007</span>
+                <span><i>12+</i></span>
+                <span>2h 18min</span>
+                <span>Fantasy/Adventure</span>
+            </h4>
+            <p>Harry Potter and the Order of the Phoenix," Harry contends with the return of Lord Voldemort, struggles with skepticism from the wizarding world, and forms Dumbledore's Army. 
+                Amid prophecy and betrayal, the story explores themes of resistance, friendship, and the cost of opposing darkness in the magical realm</p>
+             <div class="buttons">
+                <a href="#"><i class="fa-solid fa-play"></i>Play</a>
+                <a href="#"><i class="fa-solid fa-plus"></i>My List</a>
+             </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="play.png">Watch Trailer </a>
+    </div>
+    <div class="trailer">
+        <video src="WhatsApp Video 2024-01-01 at 23.00.35_6d2e15d4.mp4 " controls="true"></video>
+        <img src="close.png" class="close" onclick="toggleVideo();">
+    </div>
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
